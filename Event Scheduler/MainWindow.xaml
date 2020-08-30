@@ -1,0 +1,30 @@
+﻿<Window x:Class="Event_Scheduler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Event_Scheduler"
+        mc:Ignorable="d"
+        Title="Event Scheduler" Height="635.384" Width="795.178" Background="DodgerBlue">
+    <Window.Resources>
+        <FontStyle x:Key="FontStyle1">Normal</FontStyle>
+    </Window.Resources>
+    <Grid Margin="40,0,20.8,19.6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="349*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="209*"/>
+        </Grid.RowDefinitions>
+        <Grid.Effect>
+            <DropShadowEffect/>
+        </Grid.Effect>
+        <Label x:Name="Title" Content="Event Scheduler" Margin="168,10,0,0" VerticalAlignment="Top" Width="517" Height="101" FontWeight="Normal" FontSize="48" Grid.IsSharedSizeScope="True" HorizontalAlignment="Left" TextOptions.TextFormattingMode="Display"/>
+        <Button x:Name="Modify_Events" Content="Modify Events" HorizontalAlignment="Left" Margin="22,226,0,0" VerticalAlignment="Top" Width="260" Height="65" FontSize="36" FontFamily="Sitka Text" Click="Modifty_Event" Background="#FFDDDDDD"/>
+        <Button x:Name="Delete_event" Content="Delete Events" HorizontalAlignment="Left" Margin="435,226,0,0" VerticalAlignment="Top" Width="261" Height="65" FontSize="36" FontFamily="Sitka Text" Click="Add_event_Copy1_Click"/>
+        <Button x:Name="Add_Event" Content="Add Event" HorizontalAlignment="Left" Margin="216,131,0,0" VerticalAlignment="Top" Width="260" Height="65" FontFamily="Sitka Text" FontSize="36" Click="Add_Event_Click"/>
+        <Button x:Name="Search_Event" Content="Search Event By Date" HorizontalAlignment="Left" Margin="183,27.2,0,0" VerticalAlignment="Top" Width="340" Height="40" FontSize="22" FontFamily="Sitka Subheading" Click="Add_event_Copy_Click" Grid.Row="1" Grid.RowSpan="2"/>
+        <TextBox x:Name="TextboxMonth" HorizontalAlignment="Left" Height="43" Margin="183,333,0,0" TextWrapping="Wrap" Text="Enter Month" VerticalAlignment="Top" Width="150" Grid.RowSpan="2" FontSize="22" GotFocus="TextboxMonth_GotFocus"/>
+        <TextBox x:Name="TextboxYear" HorizontalAlignment="Left" Height="43" Margin="371,333,0,0" TextWrapping="Wrap" Text="Enter Year" VerticalAlignment="Top" Width="152" Grid.RowSpan="2" FontSize="22" IsUndoEnabled="True" TextOptions.TextHintingMode="Animated" TextOptions.TextFormattingMode="Display" GotFocus="TextboxYear_GotFocus"/>
+
+    </Grid>
+</Window>
